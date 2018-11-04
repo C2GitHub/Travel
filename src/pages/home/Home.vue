@@ -1,8 +1,9 @@
 <template>
 <div>
   <div>
-    <Home-header></Home-header>
-    <HomeSwiper></HomeSwiper>
+    <Home-header/>
+    <HomeSwiper/>
+    <HomeIcon/>
   </div>
 </div>
 </template>
@@ -10,11 +11,13 @@
 <script>
 import HomeHeader from './conponents/Header'
 import HomeSwiper from './conponents/Swiper'
+import HomeIcon from './conponents/Icon'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
-    HomeSwiper
+    HomeSwiper,
+    HomeIcon
   }
 
 }

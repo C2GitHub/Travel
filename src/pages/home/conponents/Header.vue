@@ -32,9 +32,11 @@ export default {
     line-height: .62rem
     color: #ccc
     margin: .12rem .1rem
-    padding-left: 3px
+    padding-left: 6px
     border-radius: .05rem
     background-color: #fff;
+    span
+      margin-right: .07rem
   .header-right
     float: right
     width: 1.24rem
