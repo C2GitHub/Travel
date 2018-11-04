@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="icons">
+  <div class="icons border-bottom border-top">
     <swiper :options="swiperOption" ref="swiper">
       <swiper-slide v-for="(page, index) in renderPages" :key="index">
         <div class="icon" v-for="menu in page" :key="menu.id">
@@ -92,8 +92,7 @@ export default {
   height: 0
   padding-bottom: 50%
   font-size: 14px
-  border-top: 1px solid #cacaca
-  border-bottom: 1px solid #cacaca
+  background-color: #fff;
   .icon
     float: left
     width: 25%
