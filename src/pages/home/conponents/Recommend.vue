@@ -32,7 +32,7 @@ export default {
     }
   },
   created () {
-    this.$axios.get('/hotRecommend')
+    this.$axios.get('https://easy-mock.com/mock/5bddc35f1706204c2bc9b479/hotRecommend')
       .then((res) => {
         this.proList = res.data
       })

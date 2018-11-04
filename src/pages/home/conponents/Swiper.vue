@@ -29,7 +29,7 @@ export default {
   },
   created () {
     let _this = this
-    this.$axios('/getBannerImg')
+    this.$axios('https://easy-mock.com/mock/5bddc35f1706204c2bc9b479/getBannerImg')
       .then(function (res) {
         if (res.statusText === 'OK') {
           _this.imgLists = res.data

@@ -12,9 +12,11 @@ import 'swiper/dist/css/swiper.css'
 fastClick.attach(document.body)
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
-axios.defaults.baseURL = 'https://easy-mock.com/mock/5bddc35f1706204c2bc9b479'
+
+// axios.defaults.baseURL = 'https://easy-mock.com/mock/5bddc35f1706204c2bc9b479'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 Vue.prototype.$axios = axios
+Vue.prototype.bus = new Vue()
 
 /* eslint-disable no-new */
 new Vue({

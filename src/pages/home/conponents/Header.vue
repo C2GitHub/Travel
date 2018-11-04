@@ -4,7 +4,9 @@
     <span class="iconfont">&#xe624;</span>
   </div>
   <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市/游玩主题/经典</div>
-  <div class="header-right">城市 <span class="iconfont arrow-icon">&#xe64a;</span></div>
+  <router-link to="/city">
+    <div class="header-right">北京 <span class="iconfont arrow-icon">&#xe64a;</span></div>
+  </router-link>
 </div>
 </template>
 
@@ -22,6 +24,8 @@ export default {
   display: flex
   color: #fff
   background-color: $bgColor
+  a
+    color: #fff
   .header-left
     width: .64rem
     float: left
