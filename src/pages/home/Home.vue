@@ -24,6 +24,18 @@ export default {
     HomeIcon,
     HomeRecommend,
     HomeService
+  },
+  beforeMount () {
+    console.log('beforeMount')
+  },
+  mounted () {
+    console.log('mounted')
+  },
+  activated () {
+    console.log('activated')
+  },
+  deactivated () {
+    console.log('deactivated')
   }
 
 }

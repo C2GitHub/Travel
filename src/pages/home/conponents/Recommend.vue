@@ -2,7 +2,11 @@
     <div class="recommend">
       <div class="title border-bottom">{{title}}</div>
       <ul class="content">
-        <li class="pro-item border-bottom" v-for="item in proList" :key="(item.id+1)">
+        <router-link class="pro-item border-bottom"
+            v-for="item in proList"
+            :key="(item.id+1)"
+            tag="li"
+            :to="{path: '/detail', query: {id: item.id}}">
           <div class="item-img-wrapper">
             <img :src="item.imgUrl" alt="">
           </div>
@@ -11,7 +15,7 @@
             <p class="item-desc">{{item.desc}}</p>
             <span class="item-price">{{item.price}}</span>
           </div>
-        </li>
+        </router-link>
       </ul>
       <div class="more border-bottom border-top">查看更多商品</div>
     </div>
@@ -58,6 +62,7 @@ export default {
     .pro-item
       width: 100%
       display: flex;
+      cursor: pointer
       background-color: #fff;
       .item-img-wrapper
         width: 1.9rem

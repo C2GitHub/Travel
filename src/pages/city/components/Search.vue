@@ -5,7 +5,12 @@
    </div>
    <div class="search-content" ref="wrapper"  v-show="!!keyword.length">
      <ul>
-       <li v-for="(item, index) in lists" :key="index" class="border-bottom">{{item}}</li>
+       <li
+         v-for="(item, index) in lists"
+         :key="index"
+         @click="handleCityClick(item)" class="border-bottom">
+         {{item}}
+       </li>
        <li class="border-bottom" v-show="!lists.length">没有找到匹配数据</li>
      </ul>
    </div>
@@ -17,6 +22,11 @@ import BScroll from 'better-scroll'
 export default {
   name: 'Header',
   methods: {
+    handleCityClick (city) {
+      this.$store.commit('changeCity', city)
+      this.keyword = ''
+      this.$router.push('/')
+    }
   },
   data () {
     return {

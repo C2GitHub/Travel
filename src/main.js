@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store/index.js'
 import axios from 'axios'
 import fastClick from 'fastclick/lib/fastclick.js'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -22,6 +23,7 @@ Vue.prototype.bus = new Vue()
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
